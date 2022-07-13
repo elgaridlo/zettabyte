@@ -1,5 +1,3 @@
-
-
 const findTheHighestValue = (arr) => {
     let highest = 0
 
