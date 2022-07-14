@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "soal1": "node ./Section_2/soal1.js",
     "soal2": "node ./Section_2/soal2.js",
-    "soal3": "node ./Section_2/soal3.js"
+    "soal3": "node ./Section_2/soal3.js",
+    "soal4": "node ./Section_2/soal4.js"
   },
   "keywords": [],
   "author": "",
