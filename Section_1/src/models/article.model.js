@@ -9,10 +9,10 @@ const articleSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    comments: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref:'comment'
-    },
+    // comments: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref:'comment'
+    // },
 },{
     timestamp: true
 })
