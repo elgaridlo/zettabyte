@@ -1,24 +1,16 @@
-const Article = require("../models/Article.model")
+const articleMutation = require("./article.mutation")
+const articleResolvers = require("./article.resolvers")
+const commentMutation = require("./comment.mutation")
+const commentResolvers = require("./comment.resolvers")
 
 const resolvers = {
     Query : {
-        hello: () => {
-            return 'Hello World'
-        },
-        getAllArticles: async () => {
-            const docs = await Article.find()
-
-            return docs
-        }
+        ...articleResolvers,
+        ...commentResolvers
     },
     Mutation: {
-        createArticle: async (parent, args, context, info) => {
-            const {title, content} = args.create
-
-            const articleNew = await Article.create({title, content})
-
-            return articleNew
-        }
+        ...articleMutation,
+        ...commentMutation
     }
 }
 

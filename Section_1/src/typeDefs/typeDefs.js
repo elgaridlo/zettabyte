@@ -4,7 +4,7 @@ const typeDefs = gql`
     type Comment {
         id: ID
         comment: String
-        article_id: [Article]
+        article_id: Article
     }
 
     type Article {
@@ -14,8 +14,10 @@ const typeDefs = gql`
     }
 
     type Query {
-        hello: String
         getAllArticles: [Article]
+        getArticle(id: ID): Article
+        getAllComments: [Comment]
+        getComment(id: ID): Comment
     }
 
     input ArticleCreate{
@@ -23,9 +25,14 @@ const typeDefs = gql`
         content: String
     }
 
+    input CommentCreate{
+        comment: String
+        article_id: String
+    }
+
     type Mutation {
         createArticle(create: ArticleCreate): Article
+        createComment(create: CommentCreate): Comment
     }
 `
-
 module.exports = typeDefs
