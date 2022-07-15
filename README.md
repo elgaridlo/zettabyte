@@ -3,7 +3,7 @@ Dikerjakan oleh Elga Ridlo Sinatriya
 
 ## I HOPE THAT I CAN PASS THIS TEST
 
-If you want to see the repository just go to https://github.com/elgaridlo/bestari_aditama_persada2.git
+If you want to see the repository just go to https://github.com/elgaridlo/zettabyte.git
 
 ## Installasi
 
