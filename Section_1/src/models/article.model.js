@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+const mongoosePaginate = require('mongoose-paginate-v2')
 const articleSchema = mongoose.Schema({
     title: {
         type: String,
@@ -14,8 +14,10 @@ const articleSchema = mongoose.Schema({
     //     ref:'comment'
     // },
 },{
-    timestamp: true
+    timestamps: true,
 })
+
+articleSchema.plugin(mongoosePaginate);
 
 const Article = mongoose.model('article', articleSchema)
 

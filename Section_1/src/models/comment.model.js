@@ -10,7 +10,7 @@ const commentSchema = mongoose.Schema({
         ref:'article'
     },
 },{
-    timestamp: true
+    timestamps: true,
 })
 
 const Comment = mongoose.model('comment', commentSchema)

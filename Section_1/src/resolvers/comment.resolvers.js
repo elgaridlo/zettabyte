@@ -9,7 +9,8 @@ const commentResolvers = {
     getComment: async (parent, args, context, info) => {
         const {id} = args
 
-        return await Comment.findById(id)
+        const comment =  await Comment.findById(id).populate('article_id')
+        return comment
     }
 }
 

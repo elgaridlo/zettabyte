@@ -30,9 +30,21 @@ const typeDefs = gql`
         article_id: String
     }
 
+    input ArticlePagination {
+        search: String
+        page: Int
+        limit: Int
+    }
+
     type Mutation {
         createArticle(create: ArticleCreate): Article
+        updateArticle(id:ID, update: ArticleCreate): Article
+        deleteArticle(id:ID): String
+        getArticlesPagination(pagination: ArticlePagination): [Article]
         createComment(create: CommentCreate): Comment
+        updateComment(id:ID, update: CommentCreate): Comment
+        deleteComment(id:ID): String
+
     }
 `
 module.exports = typeDefs
