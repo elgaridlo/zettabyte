@@ -11,7 +11,12 @@ const startServer = async() => {
     dotenv.config()
     const apolloServer = new ApolloServer({
         typeDefs,
-        resolvers
+        resolvers,
+        csrfPrevention: true,  // see below for more about this
+        cache: "bounded",
+        cors: {
+            origin: [process.env.URL_HOST]
+        },
     })
 
     await apolloServer.start()
